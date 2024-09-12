@@ -8,12 +8,58 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvActivityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d40dp"
         android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/s20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCurrentActivitiesInfo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d200dp"
+        android:layout_marginTop="@dimen/d20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvActivityName" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStandard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/rvSingleTop"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentActivitiesInfo"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSingleTop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/rvSingleTask"
+        app:layout_constraintTop_toBottomOf="@id/rvStandard" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSingleTask"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/rvSingleInstancePerTask"
+        app:layout_constraintTop_toBottomOf="@id/rvSingleTop" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSingleInstancePerTask"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/rvSingleInstance"
+        app:layout_constraintTop_toBottomOf="@id/rvSingleTask" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSingleInstance"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvSingleInstancePerTask" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

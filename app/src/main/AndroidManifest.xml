@@ -13,6 +13,29 @@
         android:theme="@style/Theme.AndroidLauncherMode"
         tools:targetApi="31">
         <activity
+            android:name=".standard.Standard1Activity"
+            android:exported="false"
+            android:launchMode="standard" />
+        <activity
+            android:name=".singleInstance.SingleInstance1Activity"
+            android:exported="false"
+            android:launchMode="singleInstance" />
+
+        <activity
+            android:name=".singleInstancePerTask.SingleInstancePerTask1Activity"
+            android:exported="false"
+            android:launchMode="singleInstancePerTask" />
+        <activity
+            android:name=".singleTask.SingleTask1Activity"
+            android:exported="false"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".singleTop.SingleTop1Activity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
