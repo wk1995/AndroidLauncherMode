@@ -1,8 +1,6 @@
 package cn.wk1995.android.launcher.mode
 
-import android.app.ActivityManager
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
@@ -92,9 +90,7 @@ open class MainActivity : BaseActivity() {
         rvSingleTask?.adapter = singleTaskAdapter
         rvSingleInstancePerTask?.adapter = singleInstancePerTaskAdapter
         rvSingleInstance?.adapter = singleInstanceAdapter
-
-
-        tvActivityName?.text = this::class.java.simpleName
+        tvActivityName?.text = this.toString()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

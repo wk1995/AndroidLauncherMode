@@ -17,21 +17,40 @@
             android:exported="false"
             android:launchMode="standard" />
         <activity
+            android:name=".standard.Standard2Activity"
+            android:exported="false"
+            android:launchMode="standard" />
+
+        <activity
             android:name=".singleInstance.SingleInstance1Activity"
             android:exported="false"
             android:launchMode="singleInstance" />
-
+        <activity
+            android:name=".singleInstance.SingleInstance2Activity"
+            android:exported="false"
+            android:launchMode="singleInstance" />
         <activity
             android:name=".singleInstancePerTask.SingleInstancePerTask1Activity"
+            android:exported="false"
+            android:launchMode="singleInstancePerTask" />
+        <activity
+            android:name=".singleInstancePerTask.SingleInstancePerTask2Activity"
             android:exported="false"
             android:launchMode="singleInstancePerTask" />
         <activity
             android:name=".singleTask.SingleTask1Activity"
             android:exported="false"
             android:launchMode="singleTask" />
-
+        <activity
+            android:name=".singleTask.SingleTask2Activity"
+            android:exported="false"
+            android:launchMode="singleTask" />
         <activity
             android:name=".singleTop.SingleTop1Activity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".singleTop.SingleTop2Activity"
             android:exported="false"
             android:launchMode="singleTop" />
 

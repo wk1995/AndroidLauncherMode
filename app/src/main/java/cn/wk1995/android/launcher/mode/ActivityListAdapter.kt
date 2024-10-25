@@ -22,7 +22,7 @@ class ActivityListAdapter<T : Activity>(private val data: List<Class<T>>) :
     override fun onBindViewHolder(holder: ActivityListVH, position: Int) {
         val item = data[position]
         (holder.itemView as? TextView)?.apply {
-            text = item.simpleName
+            text = item.simpleName+" $position"
             setOnClickListener {
                 context.startActivity(Intent(context, item))
             }
