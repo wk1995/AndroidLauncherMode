@@ -45,4 +45,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("cn.entertech.android:base:latest.release")
+    implementation("cn.entertech.android:log-api:latest.release")
 }
